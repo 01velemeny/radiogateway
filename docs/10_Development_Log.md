@@ -1,0 +1,2 @@
+Szófosás
+Minden, ami magyarázat
