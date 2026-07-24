@@ -1,0 +1,1 @@
+Driverek feladatának meghatározása
