@@ -1,4 +1,5 @@
 A gateway belső nyelve ezeket a commandokat, eventeket és state-eket ismeri és használja. A nevek az általános rádiós nomenklatura szerint lettek elnevezve.
+The Radio Domain Language (RDL) defines the common vocabulary used by every component of the Radio Gateway. Commands express intentions, Events describe state changes, States represent the current known condition of the station, and Capabilities describe the features supported by a specific radio or driver. The RDL is intentionally independent of any transport protocol or radio control software.
 
 Command/Requests
 CMD-0001
