@@ -35,6 +35,8 @@ CMD-0016
 SetNoiseReduction
 CMD-0017
 SetSelectedStation
+CMD-0018
+SetMicGain
 
 Events
 EVT-0001
@@ -45,7 +47,7 @@ EVT-0003
 ModeChanged
 EVT-0004
 VolumeChangedInt
-EVT-0005*********
+EVT-1005
 PTTChanged
 EVT-0005
 TransmitStarted
@@ -73,6 +75,8 @@ EVT-0016
 NoiseReductionChanged
 EVT-0017
 SelectedStationChanged
+EVT-0018
+MicGainChanged
 
 State
 STA-0001
@@ -107,6 +111,8 @@ STA-0016
 NoiseReduction
 STA-0017
 SelectedStation
+STA-0017
+MicGain
 
 Capability
 CAP-0001
