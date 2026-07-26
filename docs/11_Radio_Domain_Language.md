@@ -112,7 +112,7 @@ STA-0016
 NoiseReduction
 STA-0017
 SelectedStation
-STA-0017
+STA-0018
 MicGain
 
 Capability
