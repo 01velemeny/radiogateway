@@ -3,70 +3,139 @@ A State Model a Gateway által ismert adatok alapján a rádió aktuális állap
 
 STA-0001
 OpFrequency
-Source:
-Driver
+Category: Operating State
+Type: uint
+Unit: Hz
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0002
 Band
-Source:
-Driver
+Category: Operating State
+Type: string (3.5MHz, 7MHz, 14MHz, 18MHz, 21MHz, 24MHz, 28MHz, Air, 144MHz, 430MHz)
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0003
 Mode
-Source:
-Driver
+Category: Operating State
+Type: string (AM, LSB, USB, FM, CW-LSB, CW-USB, CW, DATA, DATA-LSB, DATE-USB)
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0004
 VolumeInt
-Source:
-Driver
+Category: Audio State
+Type: byte
+Unit: %
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0005
 TransmitState
-Source:
-Driver
+Category: Transmit state
+Type: true/false
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0007
 TxPower
-Source:
-Driver
+Category: Transmit state
+Type: byte
+Unit: W
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0008
 VolumeExt
-Source:
-Driver
+Category: Audio State
+Type: byte
+Unit: %
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0009
 Squelch
-Source:
-Driver
+Category: Receiver State
+Type: byte
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0010
 RFPreamp
-Source:
-Driver
+Category: Receiver State
+Type: string (0, AMP1, AMP2)
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
+
 STA-0011
 RFGain
+Category: Receiver State
 Source:
 Driver
+
 STA-0012
 ATT
+Category: Receiver State
 Source:
 Driver
+
 STA-0013
 PowerRadio1
+Category: Connection State
 Source:
 Driver
+
 STA-0014
 PowerRadio2
+Category: Connection State
 Source:
 Driver
+
 STA-0015
 Tune
+Category: Transmit state
 Source:
 Driver
+
 STA-0016
 NoiseReduction
+Category: Receiver State
 Source:
 Driver
+
 STA-0017
 SelectedStation
+Category: Operating State
 Source:
 Driver
+
 STA-0018
 MicGain
+Category: Transmit state
 Source:
 Driver
 
