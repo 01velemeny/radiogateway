@@ -94,26 +94,42 @@ Published: Yes
 STA-0011
 RFGain
 Category: Receiver State
-Source:
-Driver
+Type: byte
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0012
 ATT
 Category: Receiver State
-Source:
-Driver
+Type: string (OFF, ATT1, ATT2)
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0013
 PowerRadio1
 Category: Connection State
-Source:
-Driver
+Type: true/false
+Unit: 0
+Writable: No
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0014
 PowerRadio2
 Category: Connection State
-Source:
-Driver
+Type: true/false
+Unit: 0
+Writable: No
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0015
 Tune
@@ -124,20 +140,32 @@ Driver
 STA-0016
 NoiseReduction
 Category: Receiver State
-Source:
-Driver
+Type: byte
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0017
 SelectedStation
 Category: Operating State
-Source:
-Driver
+Type: byte
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
 
 STA-0018
 MicGain
 Category: Transmit state
-Source:
-Driver
+Type: byte
+Unit: 0
+Writable: Yes
+Source: Driver
+Persistent: No
+Published: Yes
 
 State
 Configuration
