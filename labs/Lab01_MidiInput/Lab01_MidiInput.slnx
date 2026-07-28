@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../Lab02_MidiDiscovery/Lab02_MidiDiscovery.csproj" Id="19e79c8c-8c18-44cf-b55d-caaed4bfa20b" />
   <Project Path="Lab01_MidiInput.csproj" />
 </Solution>
