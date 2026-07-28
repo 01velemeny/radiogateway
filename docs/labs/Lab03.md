@@ -13,3 +13,5 @@ StartEventsListening()
 Console.ReadLine()
 CTR2-Dial eseményei
 encoder gyorsítás hardverből működik
+
+Zárolás után az eszköz lecsatlakozik, újra csatlakozást be kell állítani.
