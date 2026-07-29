@@ -1,3 +1,6 @@
+A döntések a Core-ban születnek, a külső eszközök eseményeinek fogadása és az RDL-re fordítás a driver-ben történik, mint ahogy az RDL fogadása és külső eszközre továbbítása is. A busz szerepe a továbbítás, kliensekkel kapcsolattartás.
+
+
 | Feladat                            | Driver | Bus |     Core     |  Miért  |
 | ---------------------------------- | :----: | :-: | :----------: | :------:|
 | MIDI esemény fogadása              |    ✓   |     |              ||
@@ -19,3 +22,5 @@
 | Polling időzítése                  |    ✓   |     |              |Driver ismeri a rádió protokollját|
 | Driver kapcsolat állapota          |    ✓   |     |  ✓ összesíti ||
 | Külső kliensek kapcsolatai         |        |  ✓  |              ||
+
+
