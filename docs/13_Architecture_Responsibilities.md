@@ -1,21 +1,21 @@
-| Feladat                            | Driver | Bus |     Core     |
-| ---------------------------------- | :----: | :-: | :----------: |
-| MIDI esemény fogadása              |    ✓   |     |              |
-| CAT válasz fogadása                |    ✓   |     |              |
-| JSON → RDL                         |    ✓   |     |              |
-| RDL → CAT                          |    ✓   |     |              |
-| Feliratkozás eseményekre           |    ✓   |  ✓  |              |
-| Esemény publikálása                |        |  ✓  | kezdeményezi |
-| Esemény továbbítása                |        |  ✓  |              |
-| Aktív rádió kiválasztása           |        |     |       ✓      |
-| Routing cél meghatározása          |        |     |       ✓      |
-| Capabilities lekérdezése           |    ✓   |     |  ✓ használja |
-| Command validálása                 |        |     |       ✓      |
-| State frissítése                   |        |     |       ✓      |
-| Policy alkalmazása                 |        |     |       ✓      |
-| FrequencyStep → Frequency számítás |        |     |       ✓      |
-| Band váltási logika                |        |     |       ✓      |
-| Konfliktuskezelés                  |        |     |       ✓      |
-| Polling időzítése                  |    ✓   |     |              |
-| Driver kapcsolat állapota          |    ✓   |     |  ✓ összesíti |
-| Külső kliensek kapcsolatai         |        |  ✓  |              |
+| Feladat                            | Driver | Bus |     Core     |  Miért  |
+| ---------------------------------- | :----: | :-: | :----------: | :------:|
+| MIDI esemény fogadása              |    ✓   |     |              ||
+| CAT válasz fogadása                |    ✓   |     |              |Driver alakítja RDL-re|
+| JSON → RDL                         |    ✓   |     |              ||
+| RDL → CAT                          |    ✓   |     |              ||
+| Feliratkozás eseményekre           |    ✓   |  ✓  |              ||
+| Esemény publikálása                |        |  ✓  | kezdeményezi ||
+| Esemény továbbítása                |        |  ✓  |              ||
+| Aktív rádió kiválasztása           |        |     |       ✓      |A Core ismeri a teljes állomást|
+| Routing cél meghatározása          |        |     |       ✓      ||
+| Capabilities lekérdezése           |    ✓   |     |  ✓ használja ||
+| Command validálása                 |        |     |       ✓      |Az állapot és capabilities alapján core tudja|
+| State frissítése                   |        |     |       ✓      ||
+| Policy alkalmazása                 |        |     |       ✓      ||
+| FrequencyStep → Frequency számítás |        |     |       ✓      |Core ismeri a State-e és a szabályokat|
+| Band váltási logika                |        |     |       ✓      |Esetleg később állítható a logika, de akkor is core|
+| Konfliktuskezelés                  |        |     |       ✓      ||
+| Polling időzítése                  |    ✓   |     |              |Driver ismeri a rádió protokollját|
+| Driver kapcsolat állapota          |    ✓   |     |  ✓ összesíti ||
+| Külső kliensek kapcsolatai         |        |  ✓  |              ||
