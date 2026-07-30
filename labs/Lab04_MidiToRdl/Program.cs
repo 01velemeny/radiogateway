@@ -1,13 +1,16 @@
-﻿using Melanchall.DryWetMidi.Multimedia;
+﻿using Lab04_MidiToRdl.Drivers;
 using Melanchall.DryWetMidi.Core;
+using Melanchall.DryWetMidi.Multimedia;
 namespace Lab04_MidiToRdl
 {
     internal class Program
     {
+        private static readonly MidiDriver driver = new MidiDriver();
         static void Main(string[] args)
         {
             Console.WriteLine("=== MIDI Event Monitor ===");
             Console.WriteLine();
+            var driver = new MidiDriver();
             try
             {
                 var inputDevice = InputDevice.GetByName("CTR2-Dial");
@@ -29,23 +32,11 @@ namespace Lab04_MidiToRdl
 
         private static void InputDevice_EventReceived(object? sender, MidiEventReceivedEventArgs e)
         {
-           if (e.Event is NoteOnEvent)
+            var command = driver.Translate(e.Event);
+            if (command != null)
             {
-                var command = new SetPTTCommand(true);
                 Console.WriteLine(command);
             }
-        }
-    }
-    public class SetPTTCommand
-    {
-        public bool Enabled { get; }
-        public SetPTTCommand(bool enabled)
-        {
-            Enabled = enabled;
-        }
-        public override string ToString()
-        {
-            return $"SetPTT({Enabled})";
         }
     }
 }
