@@ -1,13 +1,18 @@
-﻿using Lab04_MidiToRdl.Drivers;
+﻿using Lab04_MidiToRdl.Bus;
+using Lab04_MidiToRdl.Drivers;
+using Lab04_MidiToRdl.Subscribers;
 using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Multimedia;
 namespace Lab04_MidiToRdl
 {
     internal class Program
     {
-        private static readonly MidiDriver driver = new MidiDriver();
+        private static readonly MidiDriver driver = new();
+        private static readonly EventBus bus = new();
+        private static readonly ConsoleSubscriber consoleSubscriber = new();
         static void Main(string[] args)
         {
+            bus.Subscribe(consoleSubscriber);
             Console.WriteLine("=== MIDI Event Monitor ===");
             Console.WriteLine();
             var driver = new MidiDriver();
@@ -35,7 +40,7 @@ namespace Lab04_MidiToRdl
             var command = driver.Translate(e.Event);
             if (command != null)
             {
-                Console.WriteLine(command);
+                bus.Publish(command);
             }
         }
     }
