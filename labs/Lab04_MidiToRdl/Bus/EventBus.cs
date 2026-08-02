@@ -1,4 +1,5 @@
-﻿using Lab04_MidiToRdl.RDL;
+﻿using Lab04_MidiToRdl.Interfaces;
+using Lab04_MidiToRdl.RDL;
 using Lab04_MidiToRdl.Subscribers;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,8 @@ namespace Lab04_MidiToRdl.Bus
 {
     internal class EventBus
     {
-        private readonly List<ConsoleSubscriber> subscribers = new List<ConsoleSubscriber>();
-        public void Subscribe(ConsoleSubscriber subscriber)
+        private readonly List<IRdlSubscriber> subscribers = new();
+        public void Subscribe(IRdlSubscriber subscriber)
         {
             subscribers.Add(subscriber);
         }

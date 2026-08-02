@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Lab04_MidiToRdl.Subscribers
 {
-    internal class ConsoleSubscriber : IRdlSubscriber
+    internal class LoggerSubscriber : IRdlSubscriber
     {
         public void Receive(RdlCommand command)
         {
-            Console.WriteLine(command);
+            Console.WriteLine("[LOG]" + command);
         }
     }
 }

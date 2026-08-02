@@ -10,9 +10,11 @@ namespace Lab04_MidiToRdl
         private static readonly MidiDriver driver = new();
         private static readonly EventBus bus = new();
         private static readonly ConsoleSubscriber consoleSubscriber = new();
+        private static readonly LoggerSubscriber loggerSubscriber = new();
         static void Main(string[] args)
         {
             bus.Subscribe(consoleSubscriber);
+            bus.Subscribe(loggerSubscriber);
             Console.WriteLine("=== MIDI Event Monitor ===");
             Console.WriteLine();
             var driver = new MidiDriver();
