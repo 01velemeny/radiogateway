@@ -1,4 +1,5 @@
 ﻿using Lab04_MidiToRdl.Bus;
+using Lab04_MidiToRdl.Core;
 using Lab04_MidiToRdl.Drivers;
 using Lab04_MidiToRdl.Subscribers;
 using Melanchall.DryWetMidi.Core;
@@ -11,10 +12,12 @@ namespace Lab04_MidiToRdl
         private static readonly EventBus bus = new();
         private static readonly ConsoleSubscriber consoleSubscriber = new();
         private static readonly LoggerSubscriber loggerSubscriber = new();
+        private static readonly GatewayCore core = new();
         static void Main(string[] args)
         {
             bus.Subscribe(consoleSubscriber);
             bus.Subscribe(loggerSubscriber);
+            bus.Subscribe(core);
             Console.WriteLine("=== MIDI Event Monitor ===");
             Console.WriteLine();
             var driver = new MidiDriver();
