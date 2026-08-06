@@ -12,7 +12,7 @@ namespace Lab04_MidiToRdl
         private static readonly EventBus bus = new();
         private static readonly ConsoleSubscriber consoleSubscriber = new();
         private static readonly LoggerSubscriber loggerSubscriber = new();
-        private static readonly GatewayCore core = new();
+        private static readonly GatewayCore core = new(bus);
         static void Main(string[] args)
         {
             bus.Subscribe(consoleSubscriber);
@@ -20,7 +20,7 @@ namespace Lab04_MidiToRdl
             bus.Subscribe(core);
             Console.WriteLine("=== MIDI Event Monitor ===");
             Console.WriteLine();
-            var driver = new MidiDriver();
+            //var driver = new MidiDriver(); let's delete
             try
             {
                 var inputDevice = InputDevice.GetByName("CTR2-Dial");
