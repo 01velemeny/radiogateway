@@ -3,5 +3,7 @@
   <Project Path="../Lab03_MidiEvents/Lab03_MidiEvents.csproj" Id="8dec6a25-4338-4d53-912e-2a4e55198f0b" />
   <Project Path="../Lab04_MidiToRdl/Lab04_MidiToRdl.csproj" Id="70d939e3-8563-44d6-bf3e-01bc74257962" />
   <Project Path="../Lab05_RdlEnvelope/Lab05_RdlEnvelope.csproj" Id="5d029ea5-1bba-4e4e-97b6-afd613e969e7" />
+  <Project Path="../Lab06_RemoteClient/Lab06_RemoteClient.csproj" Id="14bc850e-7d97-41b0-865e-d7a48ad2e114" />
+  <Project Path="../Lab06_RemoteControl/Lab06_RemoteControl.csproj" Id="c07f7f13-db4e-42dd-a2d0-f0d097783943" />
   <Project Path="Lab01_MidiInput.csproj" />
 </Solution>
