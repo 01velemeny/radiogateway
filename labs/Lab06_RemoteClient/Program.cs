@@ -12,14 +12,26 @@ internal class Program
         Console.WriteLine("Connected to server.");
 
         using NetworkStream stream = client.GetStream();
-        byte[] message = Encoding.UTF8.GetBytes("PING\n");
-        await stream.WriteAsync(message);
-        Console.WriteLine("Sent: PING");
 
+        string json = """
+        {
+            "source": "CLIENT",
+            "destination": "CORE",
+            "command": "SetPTT",
+            "value": true
+        }
+        """;
+        byte[] message = Encoding.UTF8.GetBytes(json);
+        //byte[] message = Encoding.UTF8.GetBytes("PING\n");
+        await stream.WriteAsync(message);
+        Console.WriteLine("Sent: SetPTT");
+
+        /*
         byte[] buffer = new byte[1024];
         int bytesRead = await stream.ReadAsync(buffer);
         string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
         Console.WriteLine($"Received: {response.Trim()}");
+        */
     }
 }
 
